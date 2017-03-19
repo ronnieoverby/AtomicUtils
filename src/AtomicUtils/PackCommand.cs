@@ -11,6 +11,7 @@ namespace AtomicUtils
         private readonly CommandOption _offset;
         private readonly CommandOption _target;
         private readonly CommandOption _files;
+        private readonly CommandOption _dirs;
 
         public PackCommand()
         {
@@ -19,6 +20,7 @@ namespace AtomicUtils
             _offset = Option("-o | --offset", "shifts the preset files this many slots in the target abu file", CommandOptionType.SingleValue);
             _target = Option("-t | --target", "the target abu file path", CommandOptionType.SingleValue);
             _files = Option("-f | --file", "preset file", CommandOptionType.MultipleValue);
+            _dirs = Option("-d | --dir", "preset directory", CommandOptionType.MultipleValue);
             HelpOption("-? | -h | --help");
             OnExecute((Func<int>)RunCommand);
         }
@@ -32,8 +34,14 @@ namespace AtomicUtils
                 return 1;
             }
 
+            var dirFiles = from path in _dirs.Values ?? Enumerable.Empty<string>()
+                         let di = new DirectoryInfo(path)
+                         from fi in di.EnumerateFiles("*.pre")
+                         select fi;
+
             var files = (from path in _files.Values
-                        select new FileInfo(path)).ToArray();
+                         select new FileInfo(path))
+                         .Concat(dirFiles).ToArray();
 
             if (!files.Any())
             {
