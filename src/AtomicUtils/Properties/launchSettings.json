@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "AtomicUtils": {
+      "commandName": "Project",
+      "commandLineArgs": "setall -f \"E:\\Dropbox\\amplifire\\my presets\\Church 1.pre\" -t \"E:\\Dropbox\\amplifire\\my presets\\Church 1.abu\""
+    }
+  }
+}
