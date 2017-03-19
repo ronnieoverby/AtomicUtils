@@ -1,6 +1,9 @@
 # AtomicUtils
 Utilities for Atomic Amplifire
 
+## Release of Liability
+I am not responsible for any damage that is caused by the use of this software. Use at your own risk.
+
 ## Packaging Presets
 This example packs a directory and an addtional file preset skipping the first 10 Amplifire slots:
 ```
