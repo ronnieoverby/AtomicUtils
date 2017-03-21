@@ -8,6 +8,7 @@ namespace AtomicUtils
         {            
             Commands.Add(new PackCommand());
             Commands.Add(new SetAllCommand());
+            Commands.Add(new ExtractCabCommand());
             HelpOption("-h | -? | --help");
         }
     }

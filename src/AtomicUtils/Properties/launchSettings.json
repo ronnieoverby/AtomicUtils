@@ -2,7 +2,7 @@
   "profiles": {
     "AtomicUtils": {
       "commandName": "Project",
-      "commandLineArgs": "setall -f \"E:\\Dropbox\\amplifire\\my presets\\Church 1.pre\" -t \"E:\\Dropbox\\amplifire\\my presets\\Church 1.abu\""
+      "commandLineArgs": "extract-cab -f \"C:\\Users\\rdodo\\Desktop\\has cab.pre\" -t \"C:\\Users\\rdodo\\Desktop\\my.cab\""
     }
   }
 }

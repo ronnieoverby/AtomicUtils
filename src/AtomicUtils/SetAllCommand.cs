@@ -35,19 +35,11 @@ namespace AtomicUtils
                 return 1;
             }
 
-            try
-            {
-                var predef = File.ReadAllText(preset);
-                using (var output = File.OpenWrite(target))
-                    Amplifire.SetEveryPreset(predef, output); 
+            var predef = File.ReadAllText(preset);
+            using (var output = File.OpenWrite(target))
+                Amplifire.SetEveryPreset(predef, output);
 
-                return 0;
-            }
-            catch (Exception ex)
-            {
-                WriteLine(ex);
-                return 1;
-            }
+            return 0;
         }
     }
 }

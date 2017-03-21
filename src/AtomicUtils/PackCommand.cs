@@ -35,9 +35,9 @@ namespace AtomicUtils
             }
 
             var dirFiles = from path in _dirs.Values ?? Enumerable.Empty<string>()
-                         let di = new DirectoryInfo(path)
-                         from fi in di.EnumerateFiles("*.pre")
-                         select fi;
+                           let di = new DirectoryInfo(path)
+                           from fi in di.EnumerateFiles("*.pre")
+                           select fi;
 
             var files = (from path in _files.Values
                          select new FileInfo(path))
@@ -56,16 +56,9 @@ namespace AtomicUtils
                 if (_offset.HasValue())
                     offset = int.Parse(_offset.Value());
 
-                try
-                {
-                    Amplifire.PackagePresets(files, s, offset);
-                    return 0;
-                }
-                catch (Exception ex)
-                {
-                    WriteLine(ex);
-                    return 1;
-                }
+                Amplifire.PackagePresets(files, s, offset);
+                return 0;
+
             }
         }
     }
