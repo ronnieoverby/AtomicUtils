@@ -8,8 +8,8 @@ I am not responsible for any damage that is caused by the use of this software. 
 Head to the releases page and pick the best build for you. https://github.com/ronnieoverby/AtomicUtils/releases
 
   - win.zip : windows executable + dependencies
-  - osx.zip : osx executable + dependencies
-  - portable.zip : portable executable (requires dotnet core to be pre-installed)
+  - osx.zip : osx executable + dependencies
+  - portable.zip : portable executable (requires [dotnet core](https://www.microsoft.com/net/download/core#/runtime) to be pre-installed)
 
 ## Usage
 
