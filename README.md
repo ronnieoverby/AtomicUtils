@@ -9,7 +9,7 @@ Head to the releases page and pick the best build for you. https://github.com/ro
 
   - win.zip : windows executable + dependencies
   - osx.zip : osx executable + dependencies
-  - portable.zip : portable executable (requires [dotnet core](https://www.microsoft.com/net/download/core#/runtime) to be pre-installed)
+  - portable.zip : portable executable (requires [.NET Core 1.1.1 runtime](https://www.microsoft.com/net/download/core#/runtime) to be pre-installed)
 
 ## Usage
 
